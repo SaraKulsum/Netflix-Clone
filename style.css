@@ -1,0 +1,283 @@
+body {
+    background-color: #111;
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .dropdown-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-top: 3px;
+    display: none;
+  }
+  
+  .dropdown {
+    background-color: black;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100px;
+  }
+  
+  .dropdown span {
+    cursor: pointer;
+  }
+  
+  .original__movies {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .profile:hover .dropdown-container {
+    display: block;
+  }
+  
+  .original__movies,
+  .movies__container {
+    padding-left: 30px;
+    display: flex;
+    overflow-x: scroll;
+    overflow: hidden;
+  }
+  
+  .original__movies::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .original__movies img {
+    margin-right: 10px;
+    height: 250px;
+    width: auto;
+  }
+  
+  .original__movies img,
+  .movies__container img {
+    transition: all 0.2s ease-out;         
+    cursor: pointer;
+  }
+  
+  .original__movies img:hover,
+  .movies__container img:hover {
+     transform: scale(1.1);               
+  }
+  
+  .movies__container img {
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 15px;
+  }
+  
+  .logo > img {
+    width: 120px;
+  }
+  
+  .profile {
+    position: relative;
+  }
+  
+  .profile > img {
+    width: 40px;
+  }
+  
+  img {
+    width: 100px;
+  }
+  
+  .featured {
+    height: 400px;
+    position: relative;
+    background-image: url('https://image.tmdb.org/t/p/original//3lBDg3i6nn5R2NKFCJ6oKyUo2j5.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .featured::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 7.4rem;
+    background-image: linear-gradient(
+      180deg,
+      transparent,
+      rgba(37, 37, 37, 0.61),
+      #111
+    );
+  }
+  
+  .netflixOriginals h2,
+  .movies__header h2 {
+    padding-left: 30px;
+    
+  }
+ #top_rated_heading{
+  margin: 10px 0 10px 0;
+ }
+  .featured h2 {
+    font-size: 50px;
+    margin: 0;
+    z-index: 10;
+  }
+  
+  .featured .featured__buttons {
+    z-index: 10;
+  }
+  
+  .featured .featured__buttons .button__play {
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    width: 80px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured .featured__buttons .button__info {
+    font-size: 10px;
+    color: rgb(255, 250, 250);
+    background-color: rgb(97, 96, 96);
+    border: none;
+    border-radius: 4px;
+    width: 80px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+ 
+  
+  .featured__buttons{
+    display: flex;
+    gap: 5px;
+  }
+  .button__play{
+    background-color: white;
+    color: black;
+   
+  }
+ h2{
+  font-size: medium;
+ }
+  .featured .featured__description {
+   
+    font-size: small;
+  }
+  .movie_info_banner{
+    max-width: 350px;
+    font-weight: 200;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  /*------navBar------*/
+  .navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+    z-index: 10;
+  }
+  .navOptions_menu{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: 15px;
+    padding-top: 8px;
+  }
+  .nav_left{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  .nav_right{
+    display: flex;
+    gap: 25px;
+  }
+
+ /*----MODAL----*/
+  #modalContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  iframe{
+    margin-top: 10px;
+    width:640px ;
+    height: 360px;
+    background-color: black;
+    margin-left: 0;
+     border: none;
+     outline: none;
+  }
+  dialog::backdrop {
+    background-color: hsla(240, 100%, 0%, 0.30);
+  }
+  #modal{
+    background-color: black;
+    width:646px ;
+    height: 465px;
+    padding: 0;
+    
+  }
+  button{
+    background-color: rgb(182, 23, 23);
+    border-radius: 2px;
+    width: 30px;
+    height: 20px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+  }
+  #modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+  }
+  h5{
+    color: antiquewhite;
+    padding-left: 2px;
+    margin-bottom: 0;
+  }
+  
+  
+  
