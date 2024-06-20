@@ -37,13 +37,17 @@ body {
   .movies__container {
     padding-left: 30px;
     display: flex;
+    overflow-y: hidden;
     overflow-x: scroll;
-    overflow: hidden;
+   
+  }
+  .original__movies::-webkit-scrollbar,
+  .movies__container::-webkit-scrollbar {
+   height: 1px;
+   background: transparent; 
   }
   
-  .original__movies::-webkit-scrollbar {
-    display: none;
-  }
+ 
   
   .original__movies img {
     margin-right: 10px;
@@ -176,7 +180,9 @@ body {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
   }
-  
+  #top_rated{
+    margin-bottom: 20px;
+  }
  
   
   .featured__buttons{
