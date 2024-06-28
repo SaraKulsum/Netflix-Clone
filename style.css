@@ -285,5 +285,12 @@ body {
     margin-bottom: 0;
   }
   
-  
-  
+.profile_icon{
+  height: 20px;
+  width: auto;
+}  
+ @media (max-width:910px) {
+  .navOptions{
+    display: none;
+  }
+ } 
